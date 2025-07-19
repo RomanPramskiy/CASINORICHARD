@@ -1,0 +1,325 @@
+    /* fonts */
+@font-face {
+    font-family: "Gotham-Bold";
+    src: url("fonts/Gotham-Bold.woff2") format("woff2");
+  }
+    /* normalization */
+html {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    color: #151515;
+    display: flex;
+    flex-direction: column;
+    font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-feature-settings: normal;
+    font-variation-settings: normal;
+}
+
+*, *::after, *::before {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+button {
+    background-color: #fff;
+    color: #000;
+    border: none;
+    padding: none;
+    margin: none;
+    cursor: pointer;
+}
+
+li, ul {
+    list-style: none;
+    list-style-type: none;
+}
+input {
+    background-color: none;
+    border: none;
+    outline: none;
+}
+    /* variables */
+:root {
+    --background: 225 15% 6%;
+    --foreground: 0 0% 98%;
+    --card: 225 15% 8%;
+    --card-foreground: 0 0% 98%;
+    --popover: 225 15% 8%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 47 96% 53%;
+    --primary-foreground: 225 15% 6%;
+    --secondary: 144 60% 50%;
+    --secondary-foreground: 225 15% 6%;
+    --muted: 225 15% 12%;
+    --muted-foreground: 0 0% 70%;
+    --accent: 144 60% 50%;
+    --accent-foreground: 225 15% 6%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 225 15% 15%;
+    --input: 225 15% 12%;
+    --ring: 47 96% 53%;
+    --radius: 0.75rem;
+    --gold: 47 96% 53%;
+    --gold-dark: 43 89% 38%;
+    --green: 144 60% 50%;
+    --green-dark: 144 60% 35%;
+    --purple: 270 50% 40%;
+    --purple-dark: 270 50% 25%;
+    --casino-gradient: linear-gradient(135deg, hsl(225 15% 8%) 0%, hsl(225 15% 12%) 100%);
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+}
+
+    /* main code */
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    }
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+.header {
+    background-color: hsl(var(--card) / 0.5);
+    position: fixed;
+    width: 100%;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border: 1px solid hsl(var(--border));
+}
+.header-container {
+    padding: 1rem;
+}
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.main {
+    background-color: black;
+    flex-grow: 1;
+    min-height: 3000px;
+}
+.logo {
+    display: flex;
+    align-items: center;
+}
+.logo__crown {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+  background-image: linear-gradient(to bottom right, hsl(var(--gold)) 0%, hsl(var(--gold-dark)) 100%);
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    margin-left: 12px;
+}
+.logo-text__casino {
+  background-image: linear-gradient(to right, hsl(var(--gold)), hsl(var(--green)), hsl(var(--gold)));
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 700;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+}
+.logo-text__trusted {
+    color: hsl(var(--muted-foreground));;
+    font-size: 12px;
+}
+.logo-footer {
+    margin-bottom: 1.5rem;
+}
+.logo__crown-footer {
+    max-width: 48px;
+    width: 100%;
+    height: 48px;
+}
+.logo-text__casino-footer {
+    font-size: 24px;
+}
+.logo-text__trusted-footer {
+    font-size: 15px;
+}
+.header-navigation__link {
+    color: hsl(var(--muted-foreground));;
+    font-size: 16px;
+    font-weight: 400;
+    transition-duration: 150ms;
+}
+.header-navigation__link:hover {
+    color: hsl(var(--gold));
+}
+.header__link-active {
+    color: hsl(var(--foreground));
+    font-weight: 500;
+}
+.header-navigation__link:not(:first-child) {
+    margin-left: 19.6px;
+}
+.footer {
+    padding: 4rem 1rem;
+    background-color: hsl(var(--card));
+    border-top: 1px solid hsl(var(--border));
+}
+.footer-container {
+    padding: 0 2rem;
+}
+.gray-text-16 {
+    color: hsl(var(--muted-foreground));
+    font-size: 16px;
+}
+.gray-text-15 {
+    color: hsl(var(--muted-foreground));
+    font-size: 0.875rem;
+}
+.footer__inner-bottom {
+    padding-top: 2rem;
+    border-top: 1px solid hsl(var(--border));
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+}
+.footer__inner-top {
+    margin-bottom: 2rem;
+    display: flex;
+    align-self: center;
+}
+.footer-verified {
+    max-width: 515px;
+}
+.footer-reviews, .footer-guides, .footer-contact {
+    max-width: 242px;
+}
+.text-gold {
+    color: hsl(var(--gold));
+}
+.text-green {
+    color: hsl(var(--green));
+}
+.text-purple {
+    color: hsl(var(--purple));
+}
+.text-white {
+    color: #fff;
+}
+.footer-reviews__title {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+.footer__arrow {
+    margin-right: 0.5rem;
+}
+.footer-reviews__item:not(:first-child) {
+    margin-top: 12px;
+}
+.footer-verified__button-block, .footer-contact__button-block {
+    display: flex;
+}
+.footer-verified__button-ssl {
+    font-weight: 600;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    padding: 0.125rem 0.625rem;
+    background-color: hsl(var(--green) / 0.2);
+    border: 1px solid hsl(var(--green) / 0.3);
+    border-radius: 9999px;
+}
+.footer-verified__button-expert {
+    font-weight: 600;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    padding: 0.125rem 0.625rem;
+    background-color: hsl(var(--gold) / 0.2);
+    border: 1px solid hsl(var(--gold) / 0.3);
+    border-radius: 9999px;
+    margin-left: 16px;
+}
+.footer-verified__paragraph {
+    margin-bottom: 1.5rem;
+    line-height: 1.625;
+}
+.footer-contact__button {
+    color: hsl(var(--primary-foreground));
+    font-weight: 600;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    padding: 0.125rem 0.625rem;
+    background-color: hsl(var(--muted));
+    border-radius: 9999px;
+}
+.footer-contact__paragraph {
+    margin: 12px 0;
+    line-height: 1.625;
+}
+.footer-contact__button:nth-child(2) {
+    margin-left: 8px;
+}
+.footer-phone {
+    margin-right: 0.5rem;
+}
+.footer__link-bottom {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+}
+.footer__link-bottom:not(:first-child) {
+    margin-left: 24px;
+}
+.footer__inner-bottom-center {
+    justify-content: center;
+}
+.footer-reviews__link:hover {
+    color: hsl(var(--gold));
+}
+.footer-reviews__link {
+    transition-duration: 150ms;
+}
+.footer-navigation {
+    display: flex;
+    justify-content: space-between;
+    width: 61%;
+}
+.footer-verified-mini {
+    max-width: 310px;
+    margin-right: 2rem;
+}
+.logo-text__casino-mini {
+    font-size: 18px;
+}
+.logo__crown-footer-mini {
+    width: 32px;
+    height: 32px;
+}
+.footer-mini {
+    padding: 3rem 1rem;
+}
+.footer-navigation-vicibet {
+    width: 100%;
+}
+.footer-verified-home {
+    margin-right: 2rem;
+}
