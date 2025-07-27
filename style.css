@@ -456,6 +456,7 @@ th, td {
     max-width: 48px;
     width: 100%;
     height: 48px;
+    flex-shrink: 0;
 }
 .logo-text__casino-footer {
     font-size: 24px;
@@ -465,7 +466,7 @@ th, td {
 }
 .header-navigation {
     display: flex;
-    gap: 19.6px;
+    gap: 19px;
     justify-content: flex-end;
 }
 .header-navigation__link {
@@ -656,7 +657,6 @@ th, td {
 .home-introduction {
     background-image: linear-gradient(to right, hsl(var(--gold) / 0.05), hsl(var(--green) / 0.05), hsl(var(--purple) / 0.05));
     padding: 6rem 1rem;
-    height: 1037px;
 }
 .home-introduction-benefits__image {
     margin-bottom: 0.75rem;
@@ -752,7 +752,7 @@ th, td {
 }
 .home-introduction-benefits-row {
     display: flex;
-    justify-content: space-between;
+    gap: 1.5rem;
     margin-bottom: 4rem;
     width: 100%;
 }
@@ -761,7 +761,6 @@ th, td {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    max-width: 238px;
     width: 100%;
     border-radius: 12px;
     padding: 1.5rem;
@@ -793,7 +792,6 @@ th, td {
     background-image: linear-gradient(to bottom right, hsl(var(--green) / 0.2), hsl(var(--green) / 0.1));
 }
 .home-introduction-stats {
-    max-width: 1024px;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -860,7 +858,6 @@ th, td {
 }
 .home-exclusive-bonuses-get__form {
     gap: 1rem;
-    max-width: 512px;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -871,7 +868,6 @@ th, td {
     border: 2px solid hsl(var(--gold) / 0.3);
     border-radius: 12px;
     width: 100%;
-    max-width: 328px;
     height: 2.5rem;
     display: flex;
     outline-offset: 2px;
@@ -1067,6 +1063,7 @@ th, td {
     flex: 1 1 0%;
     cursor: pointer;
     font-weight: 700;
+    width: 100%;
 }
 .home-top-promo-call-out__button--play:hover {
     background-image: linear-gradient(to right, hsl(var(--gold-dark)), hsl(var(--gold)));
@@ -1085,8 +1082,6 @@ th, td {
     padding: 0.75rem 1.5rem;
     font-size: 0.875rem;
     line-height: 1.25rem;
-    max-width: 163px;
-    width: 100%;
     white-space: nowrap;
 }
 .home-top-promo-call-out__button--read:hover {
@@ -1200,23 +1195,20 @@ th, td {
     max-width: 768px;
     margin: 1rem auto 4rem;
 }
-.casino-games-cards-row {
-    display: flex;
-    gap: 2rem;
-}
 .casino-games-cards {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 2rem;
+    width: 100%;
 }
 .casino-games-card {
     display: flex;
     flex-direction: column;
-    max-width: 424px;
     width: 100%;
     transition-duration: 300ms;
     animation-duration: 300ms;
     border-radius: 12px;
+    text-align: center;
 }
 .casino-games-card:hover {
     transform: translateY(-4px);
@@ -1287,7 +1279,6 @@ th, td {
     align-items: start;
 }
 .home-most-popular-card {
-    max-width: 346.66px;
     width: 100%;
     transition-duration: 150ms;
     border-radius: 12px;
@@ -1296,12 +1287,8 @@ th, td {
     padding: 1.5rem;
 }
 .home-most-popular-cards {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-}
-.home-most-popular-cards-row {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 1.5rem;
 }
 .home-most-popular-card-header {
@@ -1377,12 +1364,12 @@ th, td {
     max-width: 768px;
     width: 100%;
 }
-.home-types-bonuses-cards-row {
-    display: flex;
+.home-types-bonuses-cards {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 1.5rem;
 }
 .home-types-bonuses-card {
-    max-width: 316px;
     width: 100%;
     transition-duration: 150ms;
     border-radius: 12px;
@@ -1444,12 +1431,8 @@ th, td {
     margin-bottom: 3rem;
 }
 .home-secure-payment-cards-column {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-.home-secure-payment-cards-row {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 1rem;
 }
 .home-secure-payment-card__inner {
@@ -1463,7 +1446,6 @@ th, td {
     transition-duration: 150ms;
     text-align: center;
     border-radius: 12px;
-    max-width: 196px;
     width: 100%;
 }
 .home-secure-payment-card__smiley {
@@ -1547,7 +1529,6 @@ th, td {
 .home-reviews-card {
     transition-duration: 150ms;
     border-radius: 12px;
-    max-width: 341px;
     width: 100%;
 }
 .home-reviews-card__inner {
@@ -1556,7 +1537,8 @@ th, td {
     flex-direction: column;
 }
 .home-reviews-cards-row {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 2rem;
 }
 .home-reviews-card-stars {
@@ -1603,12 +1585,12 @@ th, td {
     line-height: 2.5rem;
     margin-bottom: 4rem;
 }
-.home-who-choose-row {
-    display: flex;
+.home-who-choose-cards{
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 2rem;
 }
 .home-who-choose-card {
-    max-width: 310px;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -1727,7 +1709,6 @@ th, td {
 .legal-introduction {
     padding: 4rem 1rem;
     background-image: linear-gradient(to bottom right, hsl(var(--background)), hsl(var(--card)), hsl(var(--background)));
-    height: 392px;
 }
 .legal-introduction__inner {
     max-width: 896px;
@@ -1771,9 +1752,6 @@ th, td {
 }
 .legal-introduction__buttons {
     margin-top: 1rem;
-}
-.legal-introduction--contact {
-    height: 449.6px;
 }
 .call-to-action__button--dark-green {
     color: rgb(22 163 74);
@@ -1859,9 +1837,8 @@ th, td {
     margin-bottom: 1rem;
 }
 .vicibet-introduction-rating-benefits {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     width: 100%;
 }
 .vicibet-introduction-rating-benefits__column {
@@ -1869,7 +1846,6 @@ th, td {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    max-width: 144px;
     width: 100%;
 }
 .vicibet-introduction-rating-benefits__title {
@@ -1888,19 +1864,8 @@ th, td {
     background-image: linear-gradient(to right, hsl(var(--gold) / 0.1), hsl(var(--green) / 0.1), hsl(var(--purple) / 0.1));
 }
 .vicibet-benefits__inner {
-    max-width: 1152px;
-    width: 100%;
-    padding: 0 2rem;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.vicibet-benefits__column {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(8, minmax(0, 1fr));
 }
 .vicibet-benefits__title {
     font-size: 1.875rem;
@@ -2020,7 +1985,6 @@ th, td {
 .introduction-tabs {
     padding: 5rem 1rem;
     background-image: linear-gradient(to bottom right, hsl(var(--background)), hsl(var(--card)), hsl(var(--background)));
-    height: 782px;
 }
 .introduction-tabs__inner {
     max-width: 1024px;
@@ -2050,12 +2014,11 @@ th, td {
     line-height: 2rem;
 }
 .introduction-tabs-cards {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     width: 100%;
-    max-width: 960px;
     margin-bottom: 3rem;
+    gap: 1.5rem;
 }
 .introduction-tabs-card__inner {
     padding: 1.5rem;
@@ -2066,7 +2029,6 @@ th, td {
 }
 .introduction-tabs-card {
     text-align: center;
-    max-width: 222px;
     width: 100%;
     border-radius: 12px;
 }
@@ -2267,15 +2229,6 @@ th, td {
     padding: 0.75rem 2rem;
     gap: 1rem;
 }
-.detailed-rating__inner {
-    max-width: 1024px;
-    padding: 0 2rem;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
 .detailed-rating {
     padding: 5rem 1rem;
 }
@@ -2292,23 +2245,13 @@ th, td {
     text-align: center;
     margin-bottom: 4rem;
 }
-.detailed-rating-card-row {
-    max-width: 960px;
-    width: 100%;
-    margin: 0 auto;
-    display: flex;
-    gap: 2rem;
-    margin-bottom: 2rem;
-}
 .detailed-rating-card {
-    max-width: 464px;
     width: 100%;
 }
 .detailed-rating-card__inner {
     padding: 1.5rem;
 }
 .detailed-rating-card-progress-bar {
-    max-width: 414px;
     width: 100%;
     height: 12px;
     border-radius: 8px;
@@ -2376,15 +2319,6 @@ th, td {
     padding: 5rem 1rem;
     background-image: linear-gradient(to bottom right, hsl(var(--background)), hsl(var(--card)), hsl(var(--background)));
 }
-.final-verdict__inner {
-    max-width: 896px;
-    width: 100%;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
 .final-verdict-recomended {
     background-color: hsl(var(--card));
     border: 1px solid hsl(var(--gold) / 0.5);
@@ -2399,16 +2333,14 @@ th, td {
     text-align: center;
 }
 .final-verdict-recomended-benefits {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     width: 100%;
-    height: 88px;
     margin-bottom: 2rem;
 }
 .final-verdict-recomended-benefits-column {
     display: flex;
     flex-direction: column;
-    max-width: 244.8px;
     width: 100%;
     justify-content: start;
     align-items: center;
@@ -2445,22 +2377,11 @@ th, td {
     margin-bottom: 2rem;
 }
 .final-verdict-recomended__button {
-    max-width: 344px;
-    width: 100%;
+    max-width: max-content;
 }
 .vicibet-advantages {
     padding: 5rem 1rem;
     background-color: hsl(var(--card) / 0.3);
-}
-.vicibet-advantages__inner {
-    max-width: 1152px;
-    width: 100%;
-    margin: 0 auto;
-    padding: 0 2rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
 }
 .vicibet-advantages__title {
     font-weight: 700;
@@ -2504,16 +2425,6 @@ margin-right: 0.75rem;
 }
 .vicibet-bonuses {
     padding: 5rem 1rem;
-}
-.vicibet-bonuses__inner {
-    max-width: 1152px;
-    width: 100%;
-    padding: 0 2rem;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
 .vicibet-bonuses__title {
     font-size: 2.25rem;
@@ -2570,8 +2481,9 @@ margin-right: 0.75rem;
     padding: 0.125rem 0.625rem;
 }
 .vicibet-bonuses-card-main {
-    display: flex;
+    display: grid;
     gap: 1.5rem;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 .vicibet-bonuses-card-main-column {
     max-width: 241.6px;
@@ -2601,16 +2513,6 @@ margin-right: 0.75rem;
     padding: 5rem 1rem;
     background-image: linear-gradient(to bottom right, hsl(var(--purple) / 0.1), hsl(var(--gold) / 0.1), hsl(var(--green) / 0.1));
 }
-.vicibet-vip__inner {
-    max-width: 1152px;
-    margin: 0 auto;
-    width: 100%;
-    padding: 0 2rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
 .vicibet-vip__title {
     font-weight: 700;
     font-size: 2.25rem;
@@ -2623,15 +2525,11 @@ margin-right: 0.75rem;
     margin-bottom: 4rem;
 }
 .vicibet-vip-cards {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     max-width: 1088px;
     width: 100%;
-    justify-content: space-between;
-}
-.vicibet-vip-card {
-    max-width: 254px;
-    width: 100%;
-    height: 410px;
+    gap: 1.5rem;
 }
 .vicibet-vip-card__inner {
     padding: 1.5rem;
@@ -2684,15 +2582,6 @@ margin-right: 0.75rem;
 .vicibet-payment {
     padding: 5rem 1rem;
 }
-.vicibet-payment__inner {
-    max-width: 1152px;
-    padding: 0 2rem;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
 .vicibet-payment__title {
     font-weight: 700;
     font-size: 2.25rem;
@@ -2737,6 +2626,7 @@ margin-right: 0.75rem;
     height: 16px;
     background-color: hsl(var(--gold));
     border-radius: 9999px;
+    flex-shrink: 0;
 }
 .vicibet-payment-card-column-title {
     display: flex;
@@ -2787,11 +2677,6 @@ margin-right: 0.75rem;
     line-height: 1rem;
     padding: 0.125rem 0.625rem;
 }
-.vicibet-casino-games__inner {
-    max-width: 1152px;
-    width: 100%;
-    padding: 0 2rem;
-}
 .vicibet-casino-games-card__span--smiley {
     font-size: 2.25rem;
     line-height: 2.5rem;
@@ -2805,10 +2690,10 @@ margin-right: 0.75rem;
     margin-bottom: 2rem;
     text-align: center;
 }
-.casino-games-providers-cards-row {
-    display: flex;
+.casino-games-providers-cards {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
     gap: 1.5rem;
-    max-width: 1088px;
     width: 100%;
 }
 .casino-games-providers-card {
@@ -2838,15 +2723,6 @@ margin-right: 0.75rem;
 .customer-support {
     padding: 5rem 1rem;
 }
-.customer-support__inner {
-    max-width: 1152px;
-    padding: 0 2rem;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
 .customer-support__title {
     font-size: 2.25rem;
     line-height: 2.5rem;
@@ -2859,25 +2735,16 @@ margin-right: 0.75rem;
     margin-bottom: 4rem;
 }
 .customer-support-card  {
-    max-width: 528px;
     width: 100%;
-    height: 153.6px;
     display: flex;
     flex-direction: column;
     align-items: start;
     justify-content: center;
 }
-.customer-support-cards-row {
-    display: flex;
-    max-width: 1088px;
-    width: 100%;
-    gap: 2rem;
-}
 .customer-support-cards {
-    display: flex;
-    max-width: 1088px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     width: 100%;
-    flex-direction: column;
     gap: 2rem;
 }
 .customer-support-card__inner {
@@ -2901,15 +2768,6 @@ margin-right: 0.75rem;
 }
 .security-and-licensing {
     padding: 5rem 1rem;
-}
-.security-and-licensing__inner {
-    max-width: 1152px;
-    width: 100%;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
 }
 .security-and-licensing__title {
     font-size: 2.25rem;
@@ -2961,15 +2819,13 @@ margin-right: 0.75rem;
     width: 100%;
 }
 .security-and-licensing-cards-horizontal__inner {
-    max-width: 1088px;
     width: 100%;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 1.5rem;
 }
 .security-and-licensing-card-horizontal {
-    max-width: 346.66px;
     width: 100%;
-    height: 165.6px;
     border-radius: 12px;
 }
 .security-and-licensing-card-horizontal__inner {
@@ -2995,15 +2851,6 @@ margin-right: 0.75rem;
 }
 .top-deposit {
     padding: 5rem 1rem;
-}
-.top-deposit__innner {
-    max-width: 1152px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto;
 }
 .top-deposit__title {
     font-weight: 700;
@@ -3052,7 +2899,7 @@ margin-right: 0.75rem;
 }
 .top-deposit-card-main__inner {
     display: flex;
-    justify-content: space-between;
+    gap: 1.5rem;
     align-items: start;
     width: 100%;
 }
@@ -3130,9 +2977,10 @@ margin-right: 0.75rem;
     margin-bottom: 1rem;
 }
 .top-deposit-card-main-bonuses-bottom {
-    display: flex;
-    justify-content: space-between;
-    width: 78%;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.5rem;
+    text-align: center;
 }
 .top-deposit-card-main-bonuses-bottom__text {
     font-size: 0.75rem;
@@ -3223,23 +3071,13 @@ margin-right: 0.75rem;
     margin-bottom: 4rem;
 }
 .types-deposit-cards {
-    max-width: 1088px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     width: 100%;
-    display: flex;
-    justify-content: space-between;
     gap: 2rem;
 }
 .types-deposit-card {
-    max-width: 528px;
     width: 100%;
-    height: 365.5px;
-}
-.types-deposit-cards-row {
-    max-width: 1088px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
 }
 .types-deposit-card__inner {
     padding: 1.5rem;
@@ -3459,18 +3297,12 @@ margin-right: 0.75rem;
     margin-bottom: 4rem;
 }
 .how-claim-cards {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 2rem;
     width: 100%;
-    display: flex;
-    flex-direction: column;
-}
-.how-claim-cards-row {
-    gap: 2rem;
-    width: 100%;
-    display: flex;
 }
 .how-claim-card {
-    max-width: 341.33px;
     width: 100%;
 }
 .how-claim-card__inner {
@@ -3547,17 +3379,11 @@ margin-right: 0.75rem;
 }
 .common-mistakes-cards {
     width: 100%;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 2rem;
-}
-.common-mistakes-cards-row {
-    display: flex;
-    gap: 2rem;
-    width: 100%;
 }
 .common-mistakes-card {
-    max-width: 341.33px;
     width: 100%;
 }
 .common-mistakes-card:hover {
@@ -3613,13 +3439,13 @@ margin-right: 0.75rem;
     margin-bottom: 3rem;
 }
 .touch-cards {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 2rem;
     margin-bottom: 4rem;
     width: 100%;
 }
 .touch-card {
-    max-width: 341.33px;
     width: 100%;
     text-align: center;
 }
@@ -3680,12 +3506,13 @@ margin-right: 0.75rem;
     padding: 4rem 1rem;
 }
 .send__inner {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     max-width: 896px;
     width: 100%;
     padding: 0 2rem;
     margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
+    gap: 3rem;
 }
 .send-massage__title {
     font-size: 1.875rem;
@@ -3698,7 +3525,6 @@ margin-right: 0.75rem;
     margin-bottom: 2rem;
 }
 .send-massage {
-    max-width: 392px;
     width: 100%;
 }
 .send-massage-form {
@@ -3759,15 +3585,12 @@ margin-right: 0.75rem;
     width: 100%;
     flex-direction: column;
     gap: 2rem;
-    max-width: 392px;
 }
 .send-info {
     width: 100%;
-    max-width: 392px;
 }
 .send-info-card {
     width: 100%;
-    max-width: 392px;
 }
 .send-info-card__inner {
     padding: 1.5rem;
@@ -3819,14 +3642,13 @@ margin-right: 0.75rem;
     margin-bottom: 4rem;
 }
 .how-to-play__wrapper {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 3rem;
     margin-bottom: 4rem;
     width: 100%;
-    justify-content: space-between;
 }
 .how-to-play-game-basics {
-    max-width: 520px;
     width: 100%;
 }
 .how-to-play-game-basics__title {
@@ -3836,14 +3658,12 @@ margin-right: 0.75rem;
     font-weight: 700;
 }
 .how-to-play-game-basics-cards {
-    max-width: 520px;
     width: 100%;
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
 }
 .how-to-play-game-basics-card {
-    max-width: 520px;
     width: 100%;
 }
 .how-to-play-game-basics-card__inner {
@@ -3956,19 +3776,12 @@ margin-right: 0.75rem;
     text-align: center;
 }
 .game-features-cards {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     width: 100%;
-    display: flex;
-    flex-direction: column;
     gap: 2rem;
-}
-.game-features-cards-row {
-    width: 100%;
-    display: flex;
-    gap: 2rem;
-    max-width: 1088px;
 }
 .game-features-card {
-    max-width: 341.33px;
     width: 100%;
 }
 .game-features-card__inner {
@@ -4014,20 +3827,12 @@ margin-right: 0.75rem;
 }
 .winning-strategies-cards {
     width: 100%;
-    max-width: 1088px;
-    display: flex;
-    flex-direction: column;
+    display: grid;
     gap: 2rem;
     margin-bottom: 3rem;
-}
-.winning-strategies-cards-row {
-    width: 100%;
-    max-width: 1088px;
-    display: flex;
-    gap: 2rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 .winning-strategies-card {
-    max-width: 528px;
     width: 100%;
 }
 .winning-strategies-card__inner {
@@ -4078,7 +3883,7 @@ margin-right: 0.75rem;
 }
 .winning-strategies-card-footer {
     display: flex;
-    gap: 8.75rem;
+    justify-content: space-between;
 }
 .winning-strategies-card-footer__text {
     font-size: 0.875rem;
@@ -4107,9 +3912,8 @@ margin-right: 0.75rem;
     margin-bottom: 4rem;
 }
 .best-casinos-cards {
+    display: grid;
     width: 100%;
-    display: flex;
-    flex-direction: column;
     gap: 2rem;
 }
 .best-casinos-card:hover {
@@ -4123,12 +3927,12 @@ margin-right: 0.75rem;
 }
 .best-casinos-card__inner {
     padding: 1.5rem;
-    display: flex;
+    display: grid;
     align-items: center;
     gap: 1.5rem;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 .best-casinos-card-column {
-    max-width: 241.6px;
     width: 100%;
 }
 .best-casinos-card-ostentatious {
@@ -4215,13 +4019,13 @@ margin-right: 0.75rem;
     margin-bottom: 4rem;
 }
 .expert-tips-cards {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 2rem;
     width: 100%;
 }
 .expert-tips-card {
     display: flex;
-    max-width: 341.33px;
     width: 100%;
 }
 .expert-tips-card__inner {
@@ -4309,13 +4113,13 @@ margin-right: 0.75rem;
     background-color: hsl(var(--card) / 0.3);
 }
 .game-categories-cards {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
     gap: 1rem;
     width: 100%;
 }
 .game-categories-card {
     cursor: pointer;
-    max-width: 204.8px;
     width: 100%;
 }
 .game-categories-card__inner {
@@ -4391,19 +4195,23 @@ margin-right: 0.75rem;
     line-height: 1.75rem;
     margin-bottom: 4rem;
 }
-.cryptocurrencies-cards {
+.cryptocurrencies-footer {
+    width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 2rem;
-    width: 100%;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin-top: 3rem;
+    gap: 1rem;
 }
-.cryptocurrencies-cards-row {
-    display: flex;
+.cryptocurrencies-cards {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 2rem;
     width: 100%;
 }
 .cryptocurrencies-card {
-    max-width: 341.33px;
     width: 100%;
     cursor: pointer;
 }
@@ -4608,18 +4416,12 @@ margin-right: 0.75rem;
     margin-bottom: 4rem;
 }
 .crypto-security-cards {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    width: 100%;
-}
-.crypto-security-cards-row {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 2rem;
     width: 100%;
 }
 .crypto-security-card {
-    max-width: 341.33px;
     width: 100%;
 }
 .crypto-security-card__inner {
@@ -4711,18 +4513,13 @@ margin-right: 0.75rem;
 }
 .popular-demo-cards {
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-}
-.popular-demo-cards-row {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 2rem;
 }
 .popular-demo-card {
     transition-duration: 300ms;
     animation-duration: 300ms;
-    max-width: 341.33px;
     width: 100%;
 }
 .popular-demo-card--featured {
@@ -4812,18 +4609,12 @@ margin-right: 0.75rem;
     margin-bottom: 3rem;
 }
 .why-demo-cards {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    width: 100%;
-}
-.why-demo-cards-row {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 2rem;
     width: 100%;
 }
 .why-demo-card {
-    max-width: 400px;
     width: 100%;
 }
 .why-demo-card__inner {
@@ -4867,19 +4658,19 @@ margin-right: 0.75rem;
     text-align: start;
 }
 .featured-articles-cards {
-    display: flex;
+    display: grid;
     gap: 2rem;
     width: 100%;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 .featured-articles-card {
-    max-width: 528px;
     width: 100%;
     border-radius: 12px;
 }
 .featured-articles-card-ostentatious {
     display: flex;
     position: relative;
-    height: 296px;
+    aspect-ratio: 16 / 9;
     border-radius: 12px 12px 0 0;
     background-image: linear-gradient(to bottom right, hsl(var(--gold) / 0.2), hsl(var(--green) / 0.2));
     padding: 1rem;
@@ -4969,12 +4760,11 @@ margin-right: 0.75rem;
     padding: 1.5rem;
 }
 .articles__inner {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 2rem;
     width: 100%;
-    flex-direction: row;
-    justify-content: start;
-    align-items: start;
+    align-items: flex-start;
 }
 .articles-aside-blocks {
     width: max-content;
@@ -5069,16 +4859,11 @@ margin-right: 0.75rem;
     background-color: hsl(var(--gold) / 0.8);
 }
 .articles-aside-blocks-tags-block {
-    margin-bottom: 1.5rem;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-}
-.articles-aside-blocks-tags-block-row {
     display: flex;
     gap: 0.5rem;
+    flex-wrap: wrap;
 }
-.articles-aside-blocks-tags-block-row button {
+.articles-aside-blocks-tags-block button {
     font-size: 0.75rem;
     line-height: 1rem;
     font-weight: 600;
@@ -5092,7 +4877,7 @@ margin-right: 0.75rem;
     border: 1px solid hsl(var(--border));
     transition-duration: 150ms;
 }
-.articles-aside-blocks-tags-block-row button:hover {
+.articles-aside-blocks-tags-block button:hover {
     background-color: hsl(var(--gold));
     color: hsl(var(--background));
 }
@@ -5149,8 +4934,8 @@ margin-right: 0.75rem;
     background-color: hsl(var(--gold));
 }
 .articles-cards {
-    max-width: 808px;
     width: 100%;
+    grid-column: span 3 / span 3;
 }
 .articles-cards-header {
     display: flex;
@@ -5173,16 +4958,16 @@ margin-right: 0.75rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    max-width: 268.8px;
+    aspect-ratio: 16 / 9;
     font-size: 2.25rem;
     line-height: 2.5rem;
+    border-radius: 12px 0 0 12px;
 }
 .articles-card {
     transition-duration: 300ms;
     animation-duration: 300ms;
     background-color: hsl(var(--card));
     overflow: hidden;
-    height: 270px;
     cursor: pointer;
 }
 .articles-card:hover h3 {
@@ -5290,6 +5075,7 @@ margin-right: 0.75rem;
     border: 1px solid hsl(var(--gold));
     background-color: hsl(var(--background));
     transition-duration: 150ms;
+    white-space: nowrap;
 }
 .articles-card-info-footer-feedback a:hover {
     background-color: hsl(var(--gold));
@@ -5409,7 +5195,7 @@ margin-right: 0.75rem;
     border-radius: 0.75rem;
     width: 100%;
     margin-bottom: 3rem;
-    height: 468px;
+    aspect-ratio: 16 / 9;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -5443,11 +5229,11 @@ margin-right: 0.75rem;
     padding: 4rem 1rem;
 }
 .related-articles-card {
-    max-width: 341.33px;
     width: 100%;
 }
 .related-articles-cards {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 2rem;
     width: 100%;
 }
@@ -5693,6 +5479,9 @@ margin-right: 0.75rem;
     font-size: 1.5rem;
     color: hsl(var(--card-foreground));
     margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 .article-main-sidebar-navigation ul {
     list-style: none;
@@ -5903,6 +5692,39 @@ margin-right: 0.75rem;
 }
 .burger-menu {
     display: none;
+}
+.legal-introduction-main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.detailed-rating-cards {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: 100%;
+    gap: 2rem;
+}
+.frequently-questions__text-bottom {
+    margin-top: 3rem;
+    text-align: center;
+}
+.frequently-questions__link-bottom {
+    font-weight: 600;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    margin-top: 1rem;
+}
+.articles-card-info-footer-feedback-text {
+    display: flex;
+    gap: 0.5rem;
+}
+.articles-cards-column {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 }
 }
 
@@ -6192,7 +6014,7 @@ margin-right: 0.75rem;
     min-height: 100%;
     }
 .container {
-    max-width: 1400px;
+    max-width: 1024px;
     margin: 0 auto;
 }
 .header {
@@ -6209,10 +6031,8 @@ margin-right: 0.75rem;
 }
 .header__inner {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    width: 100%;
-    flex-wrap: nowrap;
+    justify-content: space-between;
 }
 .main {
     background-color: hsl(var(--background));
@@ -6262,6 +6082,7 @@ margin-right: 0.75rem;
     max-width: 48px;
     width: 100%;
     height: 48px;
+    flex-shrink: 0;
 }
 .logo-text__casino-footer {
     font-size: 24px;
@@ -6272,9 +6093,6 @@ margin-right: 0.75rem;
 .header-navigation {
     display: flex;
     gap: 10px;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-    flex-wrap: nowrap;
     align-items: center;
 }
 .header-navigation__link {
@@ -6466,7 +6284,6 @@ margin-right: 0.75rem;
 .home-introduction {
     background-image: linear-gradient(to right, hsl(var(--gold) / 0.05), hsl(var(--green) / 0.05), hsl(var(--purple) / 0.05));
     padding: 6rem 1rem;
-    height: 1037px;
 }
 .home-introduction-benefits__image {
     margin-bottom: 0.75rem;
@@ -6500,7 +6317,7 @@ margin-right: 0.75rem;
 .home-introduction__paragraph {
     font-size: 1.5rem;
     line-height: 2rem;
-    max-width: 47rem;
+    max-width: 680px;
     text-align: center;
     margin-bottom: 3rem;
 }
@@ -6562,7 +6379,7 @@ margin-right: 0.75rem;
 }
 .home-introduction-benefits-row {
     display: flex;
-    justify-content: space-between;
+    gap: 1.5rem;
     margin-bottom: 4rem;
     width: 100%;
 }
@@ -6571,11 +6388,12 @@ margin-right: 0.75rem;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    max-width: 238px;
     width: 100%;
     border-radius: 12px;
     padding: 1.5rem;
     transition: 150ms;
+    text-align: center;
+    gap: 0.25rem;
 }
 .home-introduction-benefits-card:hover {
     transform: scale(1.05);
@@ -6603,7 +6421,6 @@ margin-right: 0.75rem;
     background-image: linear-gradient(to bottom right, hsl(var(--green) / 0.2), hsl(var(--green) / 0.1));
 }
 .home-introduction-stats {
-    max-width: 1024px;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -6681,7 +6498,6 @@ margin-right: 0.75rem;
     border: 2px solid hsl(var(--gold) / 0.3);
     border-radius: 12px;
     width: 100%;
-    max-width: 328px;
     height: 2.5rem;
     display: flex;
     outline-offset: 2px;
@@ -6772,6 +6588,7 @@ margin-right: 0.75rem;
     font-size: 0.875rem;
     line-height: 1.25rem;
     color: hsl(var(--background));
+    text-align: center;
 }
 .home-top-promo-logo-smiley {
     font-size: 2.25rem;
@@ -6877,6 +6694,7 @@ margin-right: 0.75rem;
     flex: 1 1 0%;
     cursor: pointer;
     font-weight: 700;
+    width: 100%;
 }
 .home-top-promo-call-out__button--play:hover {
     background-image: linear-gradient(to right, hsl(var(--gold-dark)), hsl(var(--gold)));
@@ -6895,8 +6713,6 @@ margin-right: 0.75rem;
     padding: 0.75rem 1.5rem;
     font-size: 0.875rem;
     line-height: 1.25rem;
-    max-width: 163px;
-    width: 100%;
     white-space: nowrap;
 }
 .home-top-promo-call-out__button--read:hover {
@@ -7010,19 +6826,15 @@ margin-right: 0.75rem;
     max-width: 768px;
     margin: 1rem auto 4rem;
 }
-.casino-games-cards-row {
-    display: flex;
-    gap: 2rem;
-}
 .casino-games-cards {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 2rem;
+    width: 100%;
 }
 .casino-games-card {
     display: flex;
     flex-direction: column;
-    max-width: 424px;
     width: 100%;
     transition-duration: 300ms;
     animation-duration: 300ms;
@@ -7097,7 +6909,6 @@ margin-right: 0.75rem;
     align-items: start;
 }
 .home-most-popular-card {
-    max-width: 346.66px;
     width: 100%;
     transition-duration: 150ms;
     border-radius: 12px;
@@ -7106,8 +6917,8 @@ margin-right: 0.75rem;
     padding: 1.5rem;
 }
 .home-most-popular-cards {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 1.5rem;
 }
 .home-most-popular-cards-row {
@@ -7187,12 +6998,12 @@ margin-right: 0.75rem;
     max-width: 768px;
     width: 100%;
 }
-.home-types-bonuses-cards-row {
-    display: flex;
+.home-types-bonuses-cards {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 1.5rem;
 }
 .home-types-bonuses-card {
-    max-width: 316px;
     width: 100%;
     transition-duration: 150ms;
     border-radius: 12px;
@@ -7254,12 +7065,8 @@ margin-right: 0.75rem;
     margin-bottom: 3rem;
 }
 .home-secure-payment-cards-column {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-.home-secure-payment-cards-row {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 1rem;
 }
 .home-secure-payment-card__inner {
@@ -7273,7 +7080,6 @@ margin-right: 0.75rem;
     transition-duration: 150ms;
     text-align: center;
     border-radius: 12px;
-    max-width: 196px;
     width: 100%;
 }
 .home-secure-payment-card__smiley {
@@ -7357,7 +7163,6 @@ margin-right: 0.75rem;
 .home-reviews-card {
     transition-duration: 150ms;
     border-radius: 12px;
-    max-width: 341px;
     width: 100%;
 }
 .home-reviews-card__inner {
@@ -7366,7 +7171,8 @@ margin-right: 0.75rem;
     flex-direction: column;
 }
 .home-reviews-cards-row {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 2rem;
 }
 .home-reviews-card-stars {
@@ -7381,8 +7187,8 @@ margin-right: 0.75rem;
 }
 .home-reviews-card-footer {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+    gap: 0.5rem;
 }
 .home-reviews-card-footer-name__title {
     font-weight: 600;
@@ -7399,6 +7205,7 @@ margin-right: 0.75rem;
     line-height: 1rem;
     padding: 0.125rem 0.625rem;
     border-radius: 9999px;
+    width: max-content;
 }
 .home-who-choose {
     padding: 5rem 1rem;
@@ -7413,12 +7220,12 @@ margin-right: 0.75rem;
     line-height: 2.5rem;
     margin-bottom: 4rem;
 }
-.home-who-choose-row {
-    display: flex;
+.home-who-choose-cards {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 2rem;
 }
 .home-who-choose-card {
-    max-width: 310px;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -7537,7 +7344,6 @@ margin-right: 0.75rem;
 .legal-introduction {
     padding: 4rem 1rem;
     background-image: linear-gradient(to bottom right, hsl(var(--background)), hsl(var(--card)), hsl(var(--background)));
-    height: 392px;
 }
 .legal-introduction__inner {
     max-width: 896px;
@@ -7581,9 +7387,6 @@ margin-right: 0.75rem;
 }
 .legal-introduction__buttons {
     margin-top: 1rem;
-}
-.legal-introduction--contact {
-    height: 449.6px;
 }
 .call-to-action__button--dark-green {
     color: rgb(22 163 74);
@@ -7669,17 +7472,16 @@ margin-right: 0.75rem;
     margin-bottom: 1rem;
 }
 .vicibet-introduction-rating-benefits {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     width: 100%;
 }
 .vicibet-introduction-rating-benefits__column {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    max-width: 144px;
+    justify-content: flex-start;
+    text-align: center;
     width: 100%;
 }
 .vicibet-introduction-rating-benefits__title {
@@ -7698,19 +7500,9 @@ margin-right: 0.75rem;
     background-image: linear-gradient(to right, hsl(var(--gold) / 0.1), hsl(var(--green) / 0.1), hsl(var(--purple) / 0.1));
 }
 .vicibet-benefits__inner {
-    max-width: 1152px;
-    width: 100%;
-    padding: 0 2rem;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.vicibet-benefits__column {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1.5rem;
 }
 .vicibet-benefits__title {
     font-size: 1.875rem;
@@ -7830,7 +7622,6 @@ margin-right: 0.75rem;
 .introduction-tabs {
     padding: 5rem 1rem;
     background-image: linear-gradient(to bottom right, hsl(var(--background)), hsl(var(--card)), hsl(var(--background)));
-    height: 782px;
 }
 .introduction-tabs__inner {
     max-width: 1024px;
@@ -7860,12 +7651,11 @@ margin-right: 0.75rem;
     line-height: 2rem;
 }
 .introduction-tabs-cards {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     width: 100%;
-    max-width: 960px;
     margin-bottom: 3rem;
+    gap: 1.5rem;
 }
 .introduction-tabs-card__inner {
     padding: 1.5rem;
@@ -7876,7 +7666,6 @@ margin-right: 0.75rem;
 }
 .introduction-tabs-card {
     text-align: center;
-    max-width: 222px;
     width: 100%;
     border-radius: 12px;
 }
@@ -8077,15 +7866,6 @@ margin-right: 0.75rem;
     padding: 0.75rem 2rem;
     gap: 1rem;
 }
-.detailed-rating__inner {
-    max-width: 1024px;
-    padding: 0 2rem;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
 .detailed-rating {
     padding: 5rem 1rem;
 }
@@ -8102,23 +7882,13 @@ margin-right: 0.75rem;
     text-align: center;
     margin-bottom: 4rem;
 }
-.detailed-rating-card-row {
-    max-width: 960px;
-    width: 100%;
-    margin: 0 auto;
-    display: flex;
-    gap: 2rem;
-    margin-bottom: 2rem;
-}
 .detailed-rating-card {
-    max-width: 464px;
     width: 100%;
 }
 .detailed-rating-card__inner {
     padding: 1.5rem;
 }
 .detailed-rating-card-progress-bar {
-    max-width: 414px;
     width: 100%;
     height: 12px;
     border-radius: 8px;
@@ -8186,15 +7956,6 @@ margin-right: 0.75rem;
     padding: 5rem 1rem;
     background-image: linear-gradient(to bottom right, hsl(var(--background)), hsl(var(--card)), hsl(var(--background)));
 }
-.final-verdict__inner {
-    max-width: 896px;
-    width: 100%;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
 .final-verdict-recomended {
     background-color: hsl(var(--card));
     border: 1px solid hsl(var(--gold) / 0.5);
@@ -8209,16 +7970,14 @@ margin-right: 0.75rem;
     text-align: center;
 }
 .final-verdict-recomended-benefits {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     width: 100%;
-    height: 88px;
     margin-bottom: 2rem;
 }
 .final-verdict-recomended-benefits-column {
     display: flex;
     flex-direction: column;
-    max-width: 244.8px;
     width: 100%;
     justify-content: start;
     align-items: center;
@@ -8255,22 +8014,11 @@ margin-right: 0.75rem;
     margin-bottom: 2rem;
 }
 .final-verdict-recomended__button {
-    max-width: 344px;
-    width: 100%;
+    max-width: max-content;
 }
 .vicibet-advantages {
     padding: 5rem 1rem;
     background-color: hsl(var(--card) / 0.3);
-}
-.vicibet-advantages__inner {
-    max-width: 1152px;
-    width: 100%;
-    margin: 0 auto;
-    padding: 0 2rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
 }
 .vicibet-advantages__title {
     font-weight: 700;
@@ -8282,18 +8030,18 @@ margin-right: 0.75rem;
     display: flex;
     gap: 3rem;
     width: 100%;
+    flex-direction: column;
 }
 .vicibet-advantages-card-advantages {
     background-color: hsl(var(--card));
     border: 1px solid hsl(var(--green) / 0.3);
-    max-width: 520px;
     width: 100%;
     border-radius: 12px;
+    width: 100%;
 }
 .vicibet-advantages-card-disadvantages {
     background-color: hsl(var(--card));
     border: 1px solid hsl(var(--destructive) / 0.3);
-    max-width: 520px;
     width: 100%;
     border-radius: 12px;
 }
@@ -8314,16 +8062,6 @@ margin-right: 0.75rem;
 }
 .vicibet-bonuses {
     padding: 5rem 1rem;
-}
-.vicibet-bonuses__inner {
-    max-width: 1152px;
-    width: 100%;
-    padding: 0 2rem;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
 .vicibet-bonuses__title {
     font-size: 2.25rem;
@@ -8380,7 +8118,8 @@ margin-right: 0.75rem;
     padding: 0.125rem 0.625rem;
 }
 .vicibet-bonuses-card-main {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 1.5rem;
 }
 .vicibet-bonuses-card-main-column {
@@ -8394,6 +8133,7 @@ margin-right: 0.75rem;
     font-size: 1.875rem;
     line-height: 2.25rem;
     margin-bottom: 0.5rem;
+    white-space: nowrap;
 }
 .vicibet-bonuses-card-footer {
     padding-top: 1.5rem;
@@ -8411,16 +8151,6 @@ margin-right: 0.75rem;
     padding: 5rem 1rem;
     background-image: linear-gradient(to bottom right, hsl(var(--purple) / 0.1), hsl(var(--gold) / 0.1), hsl(var(--green) / 0.1));
 }
-.vicibet-vip__inner {
-    max-width: 1152px;
-    margin: 0 auto;
-    width: 100%;
-    padding: 0 2rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
 .vicibet-vip__title {
     font-weight: 700;
     font-size: 2.25rem;
@@ -8433,15 +8163,11 @@ margin-right: 0.75rem;
     margin-bottom: 4rem;
 }
 .vicibet-vip-cards {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     max-width: 1088px;
     width: 100%;
-    justify-content: space-between;
-}
-.vicibet-vip-card {
-    max-width: 254px;
-    width: 100%;
-    height: 410px;
+    gap: 1.5rem;
 }
 .vicibet-vip-card__inner {
     padding: 1.5rem;
@@ -8494,15 +8220,6 @@ margin-right: 0.75rem;
 .vicibet-payment {
     padding: 5rem 1rem;
 }
-.vicibet-payment__inner {
-    max-width: 1152px;
-    padding: 0 2rem;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
 .vicibet-payment__title {
     font-weight: 700;
     font-size: 2.25rem;
@@ -8547,6 +8264,7 @@ margin-right: 0.75rem;
     height: 16px;
     background-color: hsl(var(--gold));
     border-radius: 9999px;
+    flex-shrink: 0;
 }
 .vicibet-payment-card-column-title {
     display: flex;
@@ -8597,11 +8315,6 @@ margin-right: 0.75rem;
     line-height: 1rem;
     padding: 0.125rem 0.625rem;
 }
-.vicibet-casino-games__inner {
-    max-width: 1152px;
-    width: 100%;
-    padding: 0 2rem;
-}
 .vicibet-casino-games-card__span--smiley {
     font-size: 2.25rem;
     line-height: 2.5rem;
@@ -8615,10 +8328,10 @@ margin-right: 0.75rem;
     margin-bottom: 2rem;
     text-align: center;
 }
-.casino-games-providers-cards-row {
-    display: flex;
+.casino-games-providers-cards {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 1.5rem;
-    max-width: 1088px;
     width: 100%;
 }
 .casino-games-providers-card {
@@ -8648,15 +8361,6 @@ margin-right: 0.75rem;
 .customer-support {
     padding: 5rem 1rem;
 }
-.customer-support__inner {
-    max-width: 1152px;
-    padding: 0 2rem;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
 .customer-support__title {
     font-size: 2.25rem;
     line-height: 2.5rem;
@@ -8669,25 +8373,16 @@ margin-right: 0.75rem;
     margin-bottom: 4rem;
 }
 .customer-support-card  {
-    max-width: 528px;
     width: 100%;
-    height: 153.6px;
     display: flex;
     flex-direction: column;
     align-items: start;
     justify-content: center;
 }
-.customer-support-cards-row {
-    display: flex;
-    max-width: 1088px;
-    width: 100%;
-    gap: 2rem;
-}
 .customer-support-cards {
-    display: flex;
-    max-width: 1088px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     width: 100%;
-    flex-direction: column;
     gap: 2rem;
 }
 .customer-support-card__inner {
@@ -8711,15 +8406,6 @@ margin-right: 0.75rem;
 }
 .security-and-licensing {
     padding: 5rem 1rem;
-}
-.security-and-licensing__inner {
-    max-width: 1152px;
-    width: 100%;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
 }
 .security-and-licensing__title {
     font-size: 2.25rem;
@@ -8771,15 +8457,13 @@ margin-right: 0.75rem;
     width: 100%;
 }
 .security-and-licensing-cards-horizontal__inner {
-    max-width: 1088px;
     width: 100%;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 1.5rem;
 }
 .security-and-licensing-card-horizontal {
-    max-width: 346.66px;
     width: 100%;
-    height: 165.6px;
     border-radius: 12px;
 }
 .security-and-licensing-card-horizontal__inner {
@@ -8806,15 +8490,6 @@ margin-right: 0.75rem;
 .top-deposit {
     padding: 5rem 1rem;
 }
-.top-deposit__innner {
-    max-width: 1152px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto;
-}
 .top-deposit__title {
     font-weight: 700;
     font-size: 2.25rem;
@@ -8839,7 +8514,6 @@ margin-right: 0.75rem;
 .top-deposit-card {
     transition-duration: 300ms;
     animation-duration: 300ms;
-    max-width: 1088px;
     width: 100%;
 }
 .top-deposit-card:hover {
@@ -8862,12 +8536,12 @@ margin-right: 0.75rem;
 }
 .top-deposit-card-main__inner {
     display: flex;
-    justify-content: space-between;
+    gap: 1.5rem;
     align-items: start;
+    flex-direction: column;
     width: 100%;
 }
 .top-deposit-card-main-column {
-    max-width: 330px;
     width: 100%;
 }
 .top-deposit-card-main-logo {
@@ -8940,9 +8614,10 @@ margin-right: 0.75rem;
     margin-bottom: 1rem;
 }
 .top-deposit-card-main-bonuses-bottom {
-    display: flex;
-    justify-content: space-between;
-    width: 78%;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.5rem;
+    text-align: center;
 }
 .top-deposit-card-main-bonuses-bottom__text {
     font-size: 0.75rem;
@@ -9033,23 +8708,13 @@ margin-right: 0.75rem;
     margin-bottom: 4rem;
 }
 .types-deposit-cards {
-    max-width: 1088px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     width: 100%;
-    display: flex;
-    justify-content: space-between;
     gap: 2rem;
 }
 .types-deposit-card {
-    max-width: 528px;
     width: 100%;
-    height: 365.5px;
-}
-.types-deposit-cards-row {
-    max-width: 1088px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
 }
 .types-deposit-card__inner {
     padding: 1.5rem;
@@ -9269,18 +8934,12 @@ margin-right: 0.75rem;
     margin-bottom: 4rem;
 }
 .how-claim-cards {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 2rem;
     width: 100%;
-    display: flex;
-    flex-direction: column;
-}
-.how-claim-cards-row {
-    gap: 2rem;
-    width: 100%;
-    display: flex;
 }
 .how-claim-card {
-    max-width: 341.33px;
     width: 100%;
 }
 .how-claim-card__inner {
@@ -9357,17 +9016,11 @@ margin-right: 0.75rem;
 }
 .common-mistakes-cards {
     width: 100%;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 2rem;
-}
-.common-mistakes-cards-row {
-    display: flex;
-    gap: 2rem;
-    width: 100%;
 }
 .common-mistakes-card {
-    max-width: 341.33px;
     width: 100%;
 }
 .common-mistakes-card:hover {
@@ -9423,13 +9076,13 @@ margin-right: 0.75rem;
     margin-bottom: 3rem;
 }
 .touch-cards {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 2rem;
     margin-bottom: 4rem;
     width: 100%;
 }
 .touch-card {
-    max-width: 341.33px;
     width: 100%;
     text-align: center;
 }
@@ -9490,12 +9143,12 @@ margin-right: 0.75rem;
     padding: 4rem 1rem;
 }
 .send__inner {
+    display: grid;
     max-width: 896px;
     width: 100%;
     padding: 0 2rem;
     margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
+    gap: 3rem;
 }
 .send-massage__title {
     font-size: 1.875rem;
@@ -9508,7 +9161,6 @@ margin-right: 0.75rem;
     margin-bottom: 2rem;
 }
 .send-massage {
-    max-width: 392px;
     width: 100%;
 }
 .send-massage-form {
@@ -9569,15 +9221,12 @@ margin-right: 0.75rem;
     width: 100%;
     flex-direction: column;
     gap: 2rem;
-    max-width: 392px;
 }
 .send-info {
     width: 100%;
-    max-width: 392px;
 }
 .send-info-card {
     width: 100%;
-    max-width: 392px;
 }
 .send-info-card__inner {
     padding: 1.5rem;
@@ -9629,14 +9278,12 @@ margin-right: 0.75rem;
     margin-bottom: 4rem;
 }
 .how-to-play__wrapper {
-    display: flex;
+    display: grid;
     gap: 3rem;
     margin-bottom: 4rem;
     width: 100%;
-    justify-content: space-between;
 }
 .how-to-play-game-basics {
-    max-width: 520px;
     width: 100%;
 }
 .how-to-play-game-basics__title {
@@ -9646,14 +9293,12 @@ margin-right: 0.75rem;
     font-weight: 700;
 }
 .how-to-play-game-basics-cards {
-    max-width: 520px;
     width: 100%;
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
 }
 .how-to-play-game-basics-card {
-    max-width: 520px;
     width: 100%;
 }
 .how-to-play-game-basics-card__inner {
@@ -9686,7 +9331,6 @@ margin-right: 0.75rem;
     margin-bottom: 0.5rem;
 }
 .how-to-play-winning-formula {
-    max-width: 520px;
     width: 100%;
 }
 .how-to-play-winning-formula__title {
@@ -9767,18 +9411,11 @@ margin-right: 0.75rem;
 }
 .game-features-cards {
     width: 100%;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 2rem;
-}
-.game-features-cards-row {
-    width: 100%;
-    display: flex;
-    gap: 2rem;
-    max-width: 1088px;
 }
 .game-features-card {
-    max-width: 341.33px;
     width: 100%;
 }
 .game-features-card__inner {
@@ -9823,21 +9460,12 @@ margin-right: 0.75rem;
     margin-bottom: 4rem;
 }
 .winning-strategies-cards {
+    display: grid;
     width: 100%;
-    max-width: 1088px;
-    display: flex;
-    flex-direction: column;
     gap: 2rem;
     margin-bottom: 3rem;
 }
-.winning-strategies-cards-row {
-    width: 100%;
-    max-width: 1088px;
-    display: flex;
-    gap: 2rem;
-}
 .winning-strategies-card {
-    max-width: 528px;
     width: 100%;
 }
 .winning-strategies-card__inner {
@@ -9888,7 +9516,7 @@ margin-right: 0.75rem;
 }
 .winning-strategies-card-footer {
     display: flex;
-    gap: 8.75rem;
+    justify-content: space-between;
 }
 .winning-strategies-card-footer__text {
     font-size: 0.875rem;
@@ -9934,11 +9562,10 @@ margin-right: 0.75rem;
 .best-casinos-card__inner {
     padding: 1.5rem;
     display: flex;
-    align-items: center;
+    flex-direction: column;
     gap: 1.5rem;
 }
 .best-casinos-card-column {
-    max-width: 241.6px;
     width: 100%;
 }
 .best-casinos-card-ostentatious {
@@ -10025,13 +9652,12 @@ margin-right: 0.75rem;
     margin-bottom: 4rem;
 }
 .expert-tips-cards {
-    display: flex;
+    display: grid;
     gap: 2rem;
     width: 100%;
 }
 .expert-tips-card {
     display: flex;
-    max-width: 341.33px;
     width: 100%;
 }
 .expert-tips-card__inner {
@@ -10119,13 +9745,13 @@ margin-right: 0.75rem;
     background-color: hsl(var(--card) / 0.3);
 }
 .game-categories-cards {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
     gap: 1rem;
     width: 100%;
 }
 .game-categories-card {
     cursor: pointer;
-    max-width: 204.8px;
     width: 100%;
 }
 .game-categories-card__inner {
@@ -10201,19 +9827,23 @@ margin-right: 0.75rem;
     line-height: 1.75rem;
     margin-bottom: 4rem;
 }
-.cryptocurrencies-cards {
+.cryptocurrencies-footer {
+    width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 2rem;
-    width: 100%;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin-top: 3rem;
+    gap: 1rem;
 }
-.cryptocurrencies-cards-row {
-    display: flex;
+.cryptocurrencies-cards {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 2rem;
     width: 100%;
 }
 .cryptocurrencies-card {
-    max-width: 341.33px;
     width: 100%;
     cursor: pointer;
 }
@@ -10418,18 +10048,12 @@ margin-right: 0.75rem;
     margin-bottom: 4rem;
 }
 .crypto-security-cards {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    width: 100%;
-}
-.crypto-security-cards-row {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 2rem;
     width: 100%;
 }
 .crypto-security-card {
-    max-width: 341.33px;
     width: 100%;
 }
 .crypto-security-card__inner {
@@ -10521,18 +10145,13 @@ margin-right: 0.75rem;
 }
 .popular-demo-cards {
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-}
-.popular-demo-cards-row {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 2rem;
 }
 .popular-demo-card {
     transition-duration: 300ms;
     animation-duration: 300ms;
-    max-width: 341.33px;
     width: 100%;
 }
 .popular-demo-card--featured {
@@ -10622,18 +10241,12 @@ margin-right: 0.75rem;
     margin-bottom: 3rem;
 }
 .why-demo-cards {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    width: 100%;
-}
-.why-demo-cards-row {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 2rem;
     width: 100%;
 }
 .why-demo-card {
-    max-width: 400px;
     width: 100%;
 }
 .why-demo-card__inner {
@@ -10677,19 +10290,18 @@ margin-right: 0.75rem;
     text-align: start;
 }
 .featured-articles-cards {
-    display: flex;
+    display: grid;
     gap: 2rem;
     width: 100%;
 }
 .featured-articles-card {
-    max-width: 528px;
     width: 100%;
     border-radius: 12px;
 }
 .featured-articles-card-ostentatious {
     display: flex;
     position: relative;
-    height: 296px;
+    aspect-ratio: 16 / 9;
     border-radius: 12px 12px 0 0;
     background-image: linear-gradient(to bottom right, hsl(var(--gold) / 0.2), hsl(var(--green) / 0.2));
     padding: 1rem;
@@ -10782,12 +10394,12 @@ margin-right: 0.75rem;
     display: flex;
     gap: 2rem;
     width: 100%;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: start;
     align-items: start;
 }
 .articles-aside-blocks {
-    width: max-content;
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -10797,7 +10409,6 @@ margin-right: 0.75rem;
     background-color: hsl(var(--card));
     border-radius: 12px;
     border: 1px solid hsl(var(--border));
-    max-width: 248px;
     width: 100%;
 }
 .articles-aside-block h3 {
@@ -10879,16 +10490,10 @@ margin-right: 0.75rem;
     background-color: hsl(var(--gold) / 0.8);
 }
 .articles-aside-blocks-tags-block {
-    margin-bottom: 1.5rem;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-}
-.articles-aside-blocks-tags-block-row {
     display: flex;
     gap: 0.5rem;
 }
-.articles-aside-blocks-tags-block-row button {
+.articles-aside-blocks-tags-block button {
     font-size: 0.75rem;
     line-height: 1rem;
     font-weight: 600;
@@ -10901,8 +10506,9 @@ margin-right: 0.75rem;
     background-color: transparent;
     border: 1px solid hsl(var(--border));
     transition-duration: 150ms;
+    max-width: max-content;
 }
-.articles-aside-blocks-tags-block-row button:hover {
+.articles-aside-blocks-tags-block button:hover {
     background-color: hsl(var(--gold));
     color: hsl(var(--background));
 }
@@ -10934,6 +10540,9 @@ margin-right: 0.75rem;
     border: 1px solid hsl(var(--gold) / 0.3);
     background-color: hsl(var(--card));
 }
+.articles-aside-blocks-subscribe__inner form {
+    width: 100%;
+}
 .articles-aside-blocks-subscribe__inner form input {
     font-size: 0.875rem;
     line-height: 1.25rem;
@@ -10959,7 +10568,6 @@ margin-right: 0.75rem;
     background-color: hsl(var(--gold));
 }
 .articles-cards {
-    max-width: 808px;
     width: 100%;
 }
 .articles-cards-header {
@@ -10983,16 +10591,15 @@ margin-right: 0.75rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    max-width: 268.8px;
+    aspect-ratio: 16 / 9;
     font-size: 2.25rem;
     line-height: 2.5rem;
+    border-radius: 12px 0 0 12px;
 }
 .articles-card {
     transition-duration: 300ms;
     animation-duration: 300ms;
     background-color: hsl(var(--card));
-    overflow: hidden;
-    height: 270px;
     cursor: pointer;
 }
 .articles-card:hover h3 {
@@ -11100,6 +10707,7 @@ margin-right: 0.75rem;
     border: 1px solid hsl(var(--gold));
     background-color: hsl(var(--background));
     transition-duration: 150ms;
+    white-space: nowrap;
 }
 .articles-card-info-footer-feedback a:hover {
     background-color: hsl(var(--gold));
@@ -11219,7 +10827,7 @@ margin-right: 0.75rem;
     border-radius: 0.75rem;
     width: 100%;
     margin-bottom: 3rem;
-    height: 468px;
+    aspect-ratio: 16 / 9;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -11253,11 +10861,11 @@ margin-right: 0.75rem;
     padding: 4rem 1rem;
 }
 .related-articles-card {
-    max-width: 341.33px;
     width: 100%;
 }
 .related-articles-cards {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 2rem;
     width: 100%;
 }
@@ -11300,13 +10908,11 @@ margin-right: 0.75rem;
     margin-top: 0.5rem;
 }
 .article-main__inner {
-    flex-direction: row;
+    display: grid;
     gap: 3rem;
     width: 100%;
-    align-items: start;
 }
 .article-main-info {
-    max-width: 612px;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -11437,7 +11043,6 @@ margin-right: 0.75rem;
 }
 .article-main-sidebars {
     width: 100%;
-    max-width: 172px;
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -11460,7 +11065,6 @@ margin-right: 0.75rem;
     margin-bottom: 0.5rem;
 }
 .article-main-sidebar {
-    max-width: 172px;
     width: 100%;
     background-color: hsl(var(--card));
     border: 1px solid hsl(var(--border));
@@ -11714,8 +11318,51 @@ margin-right: 0.75rem;
 .burger-menu {
     display: none;
 }
+.legal-introduction-main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.detailed-rating-cards {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: 100%;
+    gap: 2rem;
+}
+.frequently-questions__text-bottom {
+    margin-top: 3rem;
+    text-align: center;
+}
+.frequently-questions__link-bottom {
+    font-weight: 600;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    margin-top: 1rem;
+}
+.vicibet-benefits__column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.articles-card-info-footer-feedback-text {
+    display: flex;
+    gap: 0.5rem;
+}
+.articles-cards-column {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
 }
 @media (max-width: 768px) {
+    .no-display-768 {
+        display: none;
+    }
     .header-modal.open {
         display: flex;
     }
@@ -11788,4 +11435,592 @@ margin-right: 0.75rem;
     align-items: center;
     gap: 1rem;
 }
+.legal-introduction__title {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+    white-space: nowrap;
+}
+.legal-introduction__title--terms {
+    white-space: wrap;
+}
+.footer__links-bottom {
+    display: flex;
+}
+.home-introduction-benefits-row {
+    display: grid;
+}
+.home-introduction__links {
+    flex-direction: column;
+}
+.home-introduction__inner {
+    padding: 0 2rem;
+}
+.table__wrapper {
+    overflow: scroll;
+}
+.call-to-action__buttons {
+    display: flex;
+    flex-direction: column;
+}
+.home-reviews-cards-row {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+.home-reviews-card-footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.home-who-choose-cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.home-introduction-stats {
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.home-exclusive-bonuses-get__form {
+    max-width: none;
+    flex-direction: column;
+}
+.casino-games-cards {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+.home-most-popular-cards {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+.home-types-bonuses-cards {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+.home-top-promo-call-out {
+    flex-direction: column;
+    max-width: none;
+}
+.home-top-promo-information {
+    display: flex;
+    flex-direction: column;
+}
+.home-top-promo-information-key-features {
+    display: flex;
+    flex-direction: column;
+}
+.home-top-promo-information-key-features__buttons {
+    flex-direction: column;
+}
+.home-top-promo-information-key-features__button {
+    max-width: max-content;
+}
+.home-top-promo-information-block {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+.home-top-promo-logo-bottom-block {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+}
+.home-top-promo-logo-bottom-rating__button {
+    max-width: max-content;
+    margin: 0;
+}
+.home-introduction__links {
+    max-width: 320px;
+}
+.home-secure-payment-cards-column {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.frequently-questions-card__image {
+    flex-shrink: 0;
+}
+.home-introduction__title {
+    font-size: 3rem;
+}
+.home-introduction__title--small {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+}
+.vicibet-introduction__button--green {
+    width: 100%;
+    margin: 0;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+.introduction__button--flashing {
+    margin: 0;
+    margin-bottom: 1rem;
+}
+.vicibet-introduction-title-block__title {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+    font-weight: 700;
+}
+.vicibet-introduction-title-block__title span {
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+.vicibet-intoduction__paragraph {
+    font-size: 1.25rem;
+    line-height: 1.625;
+}
+.vicibet-introduction__buttons-bottom {
+    flex-direction: column;
+    max-width: 300px;
+}
+.vicibet-introduction__button-gold-gradient, .vicibet-introduction__button-black-green {
+    font-size: 1rem;
+}
+.vicibet-introduction__buttons-bottom-image {
+    width: 16px;
+    height: 16px;
+}
+.vicibet-introduction-rating-benefits {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: 1rem;
+}
+.vicibet-introduction-rating-header {
+    align-items: center;
+}
+.vicibet-benefits__inner {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.detailed-rating-cards {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: 2rem;
+}
+.detailed-rating-card-header {
+    gap: 0.25rem;
+}
+.detailed-rating-card-header-stars__text  {
+    margin-right: 0.5rem;
+}
+.vicibet-advantages-card-text-block {
+    display: flex;
+}
+.vicibet-advantages-card__image {
+    flex-shrink: 0;
+}
+.vicibet-bonuses-card__inner {
+    display: flex;
+    flex-direction: column;
+}
+.vicibet-bonuses-card-main {
+    display: flex;
+    flex-direction: column;
+}
+.vicibet-bonuses-card-main-column--big__title {
+    white-space: wrap;
+}
+.vicibet-vip-cards {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+.vicibet-vip__paragraph, .vicibet-payment__text {
+    text-align: center;
+}
+.vicibet-payment-card__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+}
+.casino-games-providers-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.casino-games-providers-card {
+    text-align: center;
+    align-items: center;
+}
+.customer-support-cards {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    width: 100%;
+    gap: 2rem;
+    width: 100%;
+}
+.security-and-licensing-cards-horizontal__inner {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    width: 100%;
+}
+.final-verdict-recomended-benefits {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: 1.5rem;
+}
+.final-verdict-recomended__button {
+    max-width: 250px;
+}
+.final-verdict-recomended__inner {
+    padding: 2rem 1rem 2rem;
+}
+.final-verdict-recomended__title {
+    font-size: 1.75rem;
+}
+.vicibet-bonuses-card-header__buttons {
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.security-and-licensing-card-info svg {
+    flex-shrink: 0;
+}
+.security-and-licensing-card__inner {
+    flex-direction: column;
+    gap: 1rem;
+}
+.security-and-licensing-card-info {
+    flex-direction: column;
+    align-items: center;
+}
+.security-and-licensing-card-info-text {
+    text-align: center;
+}
+.introduction-tabs__title {
+    line-height: 1.25;
+    font-size: 2.25rem;
+}
+.introduction-tabs__title span {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+}
+.introduction-tabs__text {
+    font-size: 1.25rem;
+}
+.introduction-tabs-cards {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+.types-deposit-cards {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+.types-deposit-card-bonus-comprasion {
+    flex-direction: column;
+    gap: 2rem;
+}
+.types-deposit-card-bonus-comprasion-advantages__list-item svg {
+    flex-shrink: 0;
+}
+.understanding-requirements-card__inner {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+}
+.understanding-requirements-calculation-column-wrapper {
+    flex-direction: column;
+    gap: 2rem;
+}
+.how-claim__text, .common-mistakes__text, .how-to-play__text {
+    text-align: center;
+}
+.how-claim-cards {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+.common-mistakes-cards {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+.call-to-action__buttons {
+    max-width: 300px;
+}
+.introduction-tabs__button--deposit {
+    max-width: 224px;
+}
+.introduction-tabs__buttons {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.introduction-tabs__button--deposit {
+    padding: 1rem 2.5rem;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+}
+.introduction-tabs__button--deposit svg {
+    flex-shrink: 0;
+}
+.how-to-play-winning-formula-card-benefits {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+.game-features-cards {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+.winning-strategies-card-header {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+.winning-strategies-card-header-ostentatious-block {
+    flex-direction: column;
+    align-items: center;
+}
+.winning-strategies-card-header-ostentatious-text-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+.winning-strategies-card-header-ostentatious__paragraph {
+    text-align: center;
+}
+.winning-strategies-card-header-ostentatious__title {
+    text-align: center;
+}
+.winning-strategies__text--footer {
+    text-align: center;
+}
+.best-casinos-card-column {
+    text-align: center;
+}
+.best-casinos-card-ostentatious-footer {
+    flex-direction: column;
+    align-items: center;
+}
+.expert-tips-card__list-item svg {
+    flex-shrink: 0;
+}
+.myths-card__inner {
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.myths-card-comprasion-reality svg {
+    flex-shrink: 0;
+}
+.introduction-tabs__buttons button {
+    max-width: 225px;
+    font-size: 1rem;
+}
+.introduction-tabs__buttons {
+    max-width: 225px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+.introduction-tabs__buttons button svg {
+    flex-shrink: 0;
+}
+.cryptocurrencies__title {
+    font-size: 1.75rem;
+}
+.cryptocurrencies__text {
+    font-size: 1rem;
+    text-align: center;
+}
+.cryptocurrencies-cards {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+.cryptocurrencies-card-header {
+    flex-direction: column;
+}
+.best-casinos__text {
+    text-align: center;
+}
+.best-casinos-card-accepted-enumeration {
+    display: flex;
+    flex-wrap: wrap;
+}
+.best-casinos-card-accepted-enumeration__tag {
+    max-width: max-content;
+}
+.best-casinos-card-accepted__text {
+    text-align: start;
+}
+.best-casinos-card-recommended {
+    text-align: center;
+}
+.best-casinos-card-info__text {
+    text-align: start;
+}
+.how-claim-card__title, .crypto-game-features__text {
+    text-align: center;
+}
+.how-claim-card-tips__list-item svg {
+    flex-shrink: 0;
+}
+.crypto-security-cards {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+.crypto-security-important__title {
+    text-align: center;
+}
+.featured-articles-card-info-detailed {
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+.featured-articles-card-info-detailed p {
+    margin: 0;
+}
+.featured-articles-card-footer {
+    flex-direction: column;
+    gap: 1rem;
+}
+.featured-articles-card-footer-feedback {
+    margin-left: 0.25rem;
+}
+.articles-aside-blocks-tags-block {
+    flex-wrap: wrap;
+}
+.articles-cards-header {
+    flex-direction: column;
+}
+.articles-card__inner {
+    flex-direction: column;
+}
+.articles-card-info-header {
+    flex-direction: column;
+    align-items: flex-start;
+}
+.articles-card-info-footer {
+    flex-direction: column;
+}
+.articles-card-info-footer-feedback {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.articles-card-info-footer-feedback-text {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-start;
+    width: 100%;
+    margin-top: 1rem;
+}
+.articles-card-info-footer-feedback a {
+    width: 100%;
+}
+.introduction-demogames__button {
+    max-width: max-content;
+}
+.introduction-demogames__buttons {
+    flex-direction: column;
+    align-items: center;
+}
+.introduction-demogames__button--bottom {
+    max-width: 230px;
+    font-size: 1rem;
+    gap: 0.5rem;
+}
+.introduction-demogames__button--bottom svg {
+    flex-shrink: 0;
+}
+.game-categories-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    justify-items: center;
+    align-items: center;
+        justify-content: center;
+    align-content: center;
+}
+.game-categories-card__title {
+    text-align: center;
+    font-size: 1rem;
+}
+.game-categories-card {
+    width: 100%;
+}
+.popular-demo__text {
+    text-align: center;
+}
+.popular-demo-cards {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+.popular-demo-card-header__button {
+    align-items: center;
+    display: flex;
+}
+.popular-demo-card-introduction {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+}
+.popular-demo-card-call-to-action__button {
+    gap: 0.5rem;
+}
+.popular-demo-card-call-to-action__button svg {
+    flex-shrink: 0;
+}
+.why-demo-cards {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+.article-introduction-post-meta {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.article-introduction-footer-tags {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    flex-wrap: wrap;
+}
+.article-introduction-footer {
+    flex-direction: column;
+    display: flex;
+    gap: 1rem;
+}
+.related-articles-cards {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+.article-main__inner {
+    display: flex;
+    flex-direction: column;
+}
+.article-call-to-action__inner button {
+    max-width: 200px;
+    white-space: nowrap;
+    gap: 0.5rem;
+}
+.article-call-to-action__inner button svg {
+    flex-shrink: 0;
+}
+.legal-introduction__title {
+    white-space: wrap;
+}
+.legal-introduction__buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+.legal-introduction__button--green {
+    margin: 0;
+}
+.touch-cards {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+.send-massage-form-row {
+    flex-direction: column;
+}
+.vicibet-intoduction__buttons-top {
+    display: flex;
+    flex-direction: column;
+}
+.vicibet-intoduction__buttons-top button {
+    width: 100%;
+}
+.vicibet-benefits__column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.demo-modal-content-main__inner code {
+    font-size: 0.7rem;
+}
+.demo-modal-content-main__inner button {
+    max-width: 220px;
+    font-size: 0.75rem;
+}
+.demo-modal-content-main__inner span {
+    text-align: center;
+}
+.common-mistakes-card-ostentatious {
+    margin: 0 0 1.375rem;
+}
+.home-who-choose-card {
+    max-width: 310px;
+}
+
 }
