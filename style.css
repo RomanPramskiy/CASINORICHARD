@@ -469,17 +469,18 @@ th, td {
     gap: 19px;
     justify-content: flex-end;
 }
-.header-navigation__link {
+.header-navigation a.active {
+    font-weight: 600;
+    color: hsl(var(--foreground));
+}
+.header-navigation a {
     font-size: 16px;
     font-weight: 400;
     transition-duration: 150ms;
+    color: hsl(var(--muted-foreground));
 }
-.header-navigation__link:hover {
+.header-navigation a:hover {
     color: hsl(var(--gold));
-}
-.header__link-active {
-    color: hsl(var(--foreground));
-    font-weight: 500;
 }
 .footer {
     padding: 4rem 1rem;
@@ -1641,17 +1642,26 @@ th, td {
     align-items: center;
     justify-content: center;
 }
-.frequently-questions__title {
+.frequently-questions__inner h1 {
     font-weight: 700;
     font-size: 2.25rem;
     line-height: 2.5rem;
     margin-bottom: 1rem;
+    background-clip: text;
+    background-image: linear-gradient(to right, hsl(var(--gold)), hsl(var(--green)));
+    color: transparent;
+    text-align: center;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    width: 100%;
+    font-weight: 700;
 }
-.frequently-questions__paragraph {
+.frequently-questions__inner p {
     font-size: 1.25rem;
     line-height: 1.75rem;
     text-align: center;
     margin-bottom: 4rem;
+    color: hsl(var(--muted-foreground));
 }
 .frequently-questions-card {
     transition-duration: 150ms;
@@ -1662,7 +1672,7 @@ th, td {
 .frequently-questions-card:not(:first-child) {
     margin-top: 24px;
 }
-.frequently-questions-card__title {
+.frequently-questions-card__inner h3 {
     display: flex;
     align-items: center;
     margin-bottom: 1.5rem;
@@ -1671,9 +1681,15 @@ th, td {
     font-size: 1.25rem;
     line-height: 1.75rem;
     gap: 0.75rem;
+    color: hsl(var(--foreground));
 }
 .frequently-questions-card__inner {
     padding: 1.5rem;
+}
+.frequently-questions-card__inner p {
+    font-size: 1rem;
+    text-align: start;
+    margin-bottom: 0;
 }
 .call-to-action {
     padding: 4rem 1rem;
@@ -1689,17 +1705,26 @@ th, td {
     align-items: center;
     justify-content: center;
 }
-.call-to-action__title {
+.call-to-action__inner h1 {
     margin-bottom: 1.5rem;
     font-size: 2.25rem;
     line-height: 2.5rem;
     font-weight: 700;
+    background-clip: text;
+    background-image: linear-gradient(to right, hsl(var(--gold)), hsl(var(--green)));
+    color: transparent;
+    text-align: center;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    width: 100%;
+    font-weight: 700;
 }
-.call-to-action__paragraph {
+.call-to-action__inner p {
     font-size: 1.25rem;
     line-height: 1.75rem;
     margin-bottom: 2rem;
     text-align: center;
+    color: hsl(var(--muted-foreground));
 }
 .call-to-action__buttons {
     display: flex;
@@ -5651,7 +5676,7 @@ margin-right: 0.75rem;
 .call-to-action__button--green {
     font-weight: 600;
 }
-.call-to-action__buttons button {
+.call-to-action__buttons a {
     gap: 1rem;
 }
 .vicibet-introduction__button-gold-gradient:hover {
@@ -6380,6 +6405,9 @@ margin-right: 0.75rem;
     width: 100%;
     margin-bottom: 1rem;
 }
+.frequently-questions-card__inner h3 svg {
+    flex-shrink: 0;
+}
 .no-display {
     display: none;
 }
@@ -6752,7 +6780,11 @@ margin-right: 0.75rem;
     gap: 10px;
     align-items: center;
 }
-.header-navigation__link {
+.header-navigation a.active {
+    font-weight: 600;
+    color: hsl(var(--foreground));
+}
+.header-navigation a {
     font-size: 12px;
     font-weight: 400;
     transition-duration: 150ms;
@@ -6760,10 +6792,10 @@ margin-right: 0.75rem;
     align-items: center;
     justify-content: center;
     text-align: center;
+    color: hsl(var(--muted-foreground));
 }
-.header__link-active {
-    color: hsl(var(--foreground));
-    font-weight: 500;
+.header-navigation a:hover {
+    color: hsl(var(--gold));
 }
 .footer {
     padding: 4rem 1rem;
@@ -7933,17 +7965,26 @@ margin-right: 0.75rem;
     align-items: center;
     justify-content: center;
 }
-.frequently-questions__title {
+.frequently-questions__inner h1 {
     font-weight: 700;
     font-size: 2.25rem;
     line-height: 2.5rem;
     margin-bottom: 1rem;
+    background-clip: text;
+    background-image: linear-gradient(to right, hsl(var(--gold)), hsl(var(--green)));
+    color: transparent;
+    text-align: center;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    width: 100%;
+    font-weight: 700;
 }
-.frequently-questions__paragraph {
+.frequently-questions__inner p {
     font-size: 1.25rem;
     line-height: 1.75rem;
     text-align: center;
     margin-bottom: 4rem;
+    color: hsl(var(--muted-foreground));
 }
 .frequently-questions-card {
     transition-duration: 150ms;
@@ -7954,7 +7995,7 @@ margin-right: 0.75rem;
 .frequently-questions-card:not(:first-child) {
     margin-top: 24px;
 }
-.frequently-questions-card__title {
+.frequently-questions-card__inner h3 {
     display: flex;
     align-items: center;
     margin-bottom: 1.5rem;
@@ -7963,9 +8004,15 @@ margin-right: 0.75rem;
     font-size: 1.25rem;
     line-height: 1.75rem;
     gap: 0.75rem;
+    color: hsl(var(--foreground));
 }
 .frequently-questions-card__inner {
     padding: 1.5rem;
+}
+.frequently-questions-card__inner p {
+    font-size: 1rem;
+    text-align: start;
+    margin-bottom: 0;
 }
 .call-to-action {
     padding: 4rem 1rem;
@@ -7981,17 +8028,26 @@ margin-right: 0.75rem;
     align-items: center;
     justify-content: center;
 }
-.call-to-action__title {
+.call-to-action__inner h1 {
     margin-bottom: 1.5rem;
     font-size: 2.25rem;
     line-height: 2.5rem;
     font-weight: 700;
+    background-clip: text;
+    background-image: linear-gradient(to right, hsl(var(--gold)), hsl(var(--green)));
+    color: transparent;
+    text-align: center;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    width: 100%;
+    font-weight: 700;
 }
-.call-to-action__paragraph {
+.call-to-action__inner p {
     font-size: 1.25rem;
     line-height: 1.75rem;
     margin-bottom: 2rem;
     text-align: center;
+    color: hsl(var(--muted-foreground));
 }
 .call-to-action__buttons {
     display: flex;
@@ -11951,7 +12007,7 @@ margin-right: 0.75rem;
 .call-to-action__button--green {
     font-weight: 600;
 }
-.call-to-action__buttons button {
+.call-to-action__buttons a {
     gap: 1rem;
 }
 .vicibet-introduction__button-gold-gradient:hover {
@@ -13015,6 +13071,9 @@ margin-right: 0.75rem;
     width: 100%;
     margin-bottom: 1rem;
 }
+.frequently-questions-card__inner h3 svg {
+    flex-shrink: 0;
+}
 .no-display {
     display: none;
 }
@@ -13047,6 +13106,13 @@ margin-right: 0.75rem;
         align-items: flex-start;
         padding: 1.5rem 1rem;
     }
+    .header-navigation-modal a {
+        color: hsl(var(--muted-foreground));
+    }
+    .header-navigation-modal a.active {
+        color: hsl(var(--foreground));
+        font-weight: 500;
+    }
     .burger-menu-line {
         width: 20px;
         height: 2px;
@@ -13066,7 +13132,7 @@ margin-right: 0.75rem;
         flex-direction: column;
         gap: 32px;
     }
-    .header-navigation__link--modal {
+    .header-navigation-modal a {
         font-size: 1.1rem;
     }
 .burger-menu.active .burger-menu-line:nth-child(1) {
@@ -13191,9 +13257,6 @@ margin-right: 0.75rem;
 }
 .home-secure-payment-cards-column {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-.frequently-questions-card__image {
-    flex-shrink: 0;
 }
 .home-introduction__title {
     font-size: 3rem;
@@ -13684,7 +13747,7 @@ margin-right: 0.75rem;
 .questions-cookies-info {
     grid-template-columns: repeat(1, minmax(0, 1fr));
 }
-.call-to-action__buttons button {
+.call-to-action__buttons a {
     gap: 0.5rem;
 }
 .call-to-action__button--gold {
