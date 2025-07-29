@@ -434,7 +434,7 @@ th, td {
     justify-content: start;
     margin-left: 12px;
 }
-.logo-text__casino {
+.logo-text a {
     font-size: 20px;
     line-height: 28px;
     font-weight: 700;
@@ -442,9 +442,18 @@ th, td {
     -webkit-text-fill-color: transparent;
     background-clip: text;
     color: transparent;
+    background-image: linear-gradient(to right, hsl(var(--gold)), hsl(var(--green)), hsl(var(--gold)));
+    color: transparent;
+    text-align: center;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    width: 100%;
+    background-clip: text;
+    font-weight: 700;
 }
-.logo-text__trusted {
+.logo-text p {
     font-size: 12px;
+    color: hsl(var(--muted-foreground));
 }
 .logo-footer {
     margin-bottom: 1.5rem;
@@ -6745,7 +6754,7 @@ margin-right: 0.75rem;
     justify-content: start;
     margin-left: 12px;
 }
-.logo-text__casino {
+.logo-text a {
     font-size: 20px;
     line-height: 28px;
     font-weight: 700;
@@ -6753,9 +6762,18 @@ margin-right: 0.75rem;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     color: transparent;
+    background-image: linear-gradient(to right, hsl(var(--gold)), hsl(var(--green)), hsl(var(--gold)));
+    color: transparent;
+    text-align: center;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    width: 100%;
+    background-clip: text;
+    font-weight: 700;
 }
-.logo-text__trusted {
+.logo-text p {
     font-size: 12px;
+    color: hsl(var(--muted-foreground));
 }
 .logo-footer {
     margin-bottom: 1.5rem;
