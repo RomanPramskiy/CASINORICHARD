@@ -467,12 +467,6 @@ th, td {
     height: 48px;
     flex-shrink: 0;
 }
-.logo-text__casino-footer {
-    font-size: 24px;
-}
-.logo-text__trusted-footer {
-    font-size: 14px;
-}
 .header-navigation {
     display: flex;
     gap: 19px;
@@ -507,123 +501,22 @@ th, td {
     align-self: center;
 }
 .footer__inner-top {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
     margin-bottom: 2rem;
-    display: flex;
-    align-self: center;
+    gap: 2rem;
 }
 .footer-verified {
-    max-width: 515px;
-}
-.footer-reviews, .footer-guides, .footer-contact {
-    max-width: 242px;
-}
-.footer-reviews__title {
-    font-size: 16px;
-    font-weight: 700;
-    margin-bottom: 1.5rem;
-}
-.footer__arrow {
-    margin-right: 0.5rem;
-    width: 14px;
-    height: 14px;
-    flex-shrink: 0;
-}
-.footer-reviews__item:not(:first-child) {
-    margin-top: 12px;
+    margin-right: 2rem;
+    grid-column: span 2 / span 2;
 }
 .footer-verified__button-block, .footer-contact__button-block {
     display: flex;
 }
-.footer-verified__button-ssl {
-    font-weight: 600;
-    font-size: 0.75rem;
-    line-height: 1rem;
-    padding: 0.125rem 0.625rem;
-    background-color: hsl(var(--green) / 0.2);
-    border: 1px solid hsl(var(--green) / 0.3);
-    border-radius: 9999px;
-    cursor: text;
-    transition-duration: 150ms;
-}
-.footer-verified__button-ssl:hover {
-    background-color: hsl(var(--gold) / 0.8);
-}
-.footer-verified__button-expert {
-    font-weight: 600;
-    font-size: 0.75rem;
-    line-height: 1rem;
-    padding: 0.125rem 0.625rem;
-    background-color: hsl(var(--gold) / 0.2);
-    border: 1px solid hsl(var(--gold) / 0.3);
-    border-radius: 9999px;
-    margin-left: 16px;
-    transition-duration: 150ms;
-    cursor: text;
-}
-.footer-verified__button-expert:hover {
-    background-color: hsl(var(--gold) / 0.8);
-}
-.footer-verified__paragraph {
-    margin-bottom: 1.5rem;
-    line-height: 1.625;
-    font-size: 16px;
-}
-.footer-contact__button {
-    color: hsl(var(--primary-foreground));
-    font-weight: 600;
-    font-size: 0.75rem;
-    line-height: 1rem;
-    padding: 0.125rem 0.625rem;
-    background-color: hsl(var(--muted));
-    border-radius: 9999px;
-    transition-duration: 150ms;
-    cursor: text;
-}
-.footer-contact__button:hover {
-    background-color: hsl(var(--gold));
-}
-.footer-contact__paragraph {
-    margin: 12px 0;
-    line-height: 1.625;
-    font-size: 14px;
-}
-.footer-contact__button:nth-child(2) {
-    margin-left: 8px;
-}
-.footer-phone {
-    margin-right: 0.5rem;
-}
-.footer__paragraph-bottom {
-    font-size: 16px;
-}
-.footer__link-bottom {
-    font-size: 0.875rem;
-    line-height: 1.25rem;
-    transition-duration: 150ms;
-}
-.footer__link-bottom:not(:first-child) {
-    margin-left: 24px;
-}
-.footer__link-bottom:hover {
-    color: hsl(var(--gold));
-}
 .footer__inner-bottom-center {
     justify-content: center;
 }
-.footer-reviews__link:hover {
-    color: hsl(var(--gold));
-}
-.footer-reviews__link {
-    transition-duration: 150ms;
-    display: flex;
-    align-items: center;
-}
-.footer-navigation {
-    display: flex;
-    gap: 2rem;
-}
 .footer-verified-mini {
-    max-width: 310px;
     margin-right: 2rem;
 }
 .logo-text__casino-mini {
@@ -638,9 +531,6 @@ th, td {
 }
 .footer-navigation-vicibet {
     width: 100%;
-}
-.footer-verified-home {
-    margin-right: 2rem;
 }
 .footer__inner-top-mini {
     margin: 0;
@@ -1959,9 +1849,6 @@ th, td {
     border-radius: 12px;
     background-color: hsl(var(--destructive) / 0.1);
     width: 100%;
-}
-.footer-reviews__item {
-    list-style-type: none;
 }
 .introduction-tabs {
     padding: 5rem 1rem;
@@ -6417,6 +6304,160 @@ margin-right: 0.75rem;
 .frequently-questions-card__inner h3 svg {
     flex-shrink: 0;
 }
+.footer-logo-text span {
+    font-size: 24px;
+    background-image: linear-gradient(to right, hsl(var(--gold)), hsl(var(--green)), hsl(var(--gold)));
+    color: transparent;
+    text-align: center;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    width: 100%;
+    background-clip: text;
+    font-weight: 700;
+}
+.footer-logo-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 12px;
+}
+.footer-reviews h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: hsl(var(--gold));
+}
+.footer-guides h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: hsl(var(--green));
+}
+.footer-contact h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: hsl(var(--purple));
+}
+.footer-verified p {
+    margin-bottom: 1.5rem;
+    line-height: 1.625;
+    font-size: 16px;
+    color: hsl(var(--muted-foreground));
+}
+.footer-logo-text p {
+    font-size: 14px;
+    color: hsl(var(--muted-foreground));
+    margin: 0;
+}
+.footer-navigation {
+    display: flex;
+}
+.footer-reviews ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+.footer-guides ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+.footer-guides ul li a:hover {
+    color: hsl(var(--gold));
+}
+.footer-guides ul li a {
+    transition-duration: 150ms;
+    display: flex;
+    align-items: center;
+    color: hsl(var(--muted-foreground));
+}
+.footer-reviews ul li a:hover {
+    color: hsl(var(--gold));
+}
+.footer-reviews ul li a {
+    transition-duration: 150ms;
+    display: flex;
+    align-items: center;
+    color: hsl(var(--muted-foreground));
+}
+.footer-contact p {
+    color: hsl(var(--muted-foreground));
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+.footer-contact span {
+    margin: 12px 0;
+    line-height: 1.625;
+    font-size: 14px;
+    color: hsl(var(--muted-foreground));
+}
+.footer-contact__button-block div {
+    color: hsl(var(--primary-foreground));
+    font-weight: 600;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    padding: 0.125rem 0.625rem;
+    background-color: hsl(var(--muted));
+    border-radius: 9999px;
+    transition-duration: 150ms;
+    cursor: text;
+}
+.footer-contact__button-block div:hover {
+    background-color: hsl(var(--gold));
+}
+.footer__inner-bottom {
+    font-size: 16px;
+    color: hsl(var(--muted-foreground));
+}
+.footer__links-bottom a {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    transition-duration: 150ms;
+    color: hsl(var(--muted-foreground));
+}
+.footer__links-bottom a:hover {
+    color: hsl(var(--gold));
+}
+.footer__links-bottom {
+    display: flex;
+    gap: 24px;
+}
+.footer-guides ul li a svg {
+    margin-right: 0.5rem;
+    flex-shrink: 0;
+}
+.footer-reviews ul li a svg {
+    margin-right: 0.5rem;
+    flex-shrink: 0;
+}
+.footer-verified__button-block div {
+    font-weight: 600;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    padding: 0.125rem 0.625rem;
+    transition-duration: 150ms;
+}
+.footer-verified__button-block div:hover {
+    background-color: hsl(var(--gold) / 0.8);
+}
+.footer-verified__button-block {
+    gap: 1rem;
+}
+.footer-contact__button-block {
+    gap: 0.5rem;
+}
+.footer-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+.footer-contact p svg {
+    flex-shrink: 0;
+}
 .no-display {
     display: none;
 }
@@ -6787,12 +6828,6 @@ margin-right: 0.75rem;
     height: 48px;
     flex-shrink: 0;
 }
-.logo-text__casino-footer {
-    font-size: 24px;
-}
-.logo-text__trusted-footer {
-    font-size: 14px;
-}
 .header-navigation {
     display: flex;
     gap: 10px;
@@ -6832,28 +6867,13 @@ margin-right: 0.75rem;
 }
 .footer__inner-top {
     margin-bottom: 2rem;
-    display: flex;
-    align-self: center;
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 2rem;
 }
 .footer-verified {
-    max-width: 515px;
-}
-.footer-reviews, .footer-guides, .footer-contact {
-    max-width: 242px;
-}
-.footer-reviews__title {
-    font-size: 16px;
-    font-weight: 700;
-    margin-bottom: 1.5rem;
-}
-.footer__arrow {
-    margin-right: 0.5rem;
-    width: 14px;
-    height: 14px;
-    flex-shrink: 0;
-}
-.footer-reviews__item:not(:first-child) {
-    margin-top: 12px;
+    margin-right: 2rem;
+    grid-column: span 2 / span 2;
 }
 .footer-verified__button-block, .footer-contact__button-block {
     display: flex;
@@ -6887,67 +6907,13 @@ margin-right: 0.75rem;
 .footer-verified__button-expert:hover {
     background-color: hsl(var(--gold) / 0.8);
 }
-.footer-verified__paragraph {
-    margin-bottom: 1.5rem;
-    line-height: 1.625;
-    font-size: 16px;
-}
-.footer-contact__button {
-    color: hsl(var(--primary-foreground));
-    font-weight: 600;
-    font-size: 0.75rem;
-    line-height: 1rem;
-    padding: 0.125rem 0.625rem;
-    background-color: hsl(var(--muted));
-    border-radius: 9999px;
-    transition-duration: 150ms;
-    cursor: text;
-}
-.footer-contact__button:hover {
-    background-color: hsl(var(--gold));
-}
-.footer-contact__paragraph {
-    margin: 12px 0;
-    line-height: 1.625;
-    font-size: 14px;
-}
-.footer-contact__button:nth-child(2) {
-    margin-left: 8px;
-}
-.footer-phone {
-    margin-right: 0.5rem;
-}
-.footer__paragraph-bottom {
-    font-size: 16px;
-}
-.footer__link-bottom {
-    font-size: 0.875rem;
-    line-height: 1.25rem;
-    transition-duration: 150ms;
-}
-.footer__link-bottom:not(:first-child) {
-    margin-left: 24px;
-}
-.footer__link-bottom:hover {
-    color: hsl(var(--gold));
-}
 .footer__inner-bottom-center {
     justify-content: center;
 }
-.footer-reviews__link:hover {
-    color: hsl(var(--gold));
-}
-.footer-reviews__link {
-    transition-duration: 150ms;
-    display: flex;
-    align-items: center;
-}
 .footer-navigation {
     display: flex;
-    gap: 2rem;
 }
 .footer-verified-mini {
-    max-width: 310px;
     margin-right: 2rem;
 }
 .logo-text__casino-mini {
@@ -6962,9 +6928,6 @@ margin-right: 0.75rem;
 }
 .footer-navigation-vicibet {
     width: 100%;
-}
-.footer-verified-home {
-    margin-right: 2rem;
 }
 .footer__inner-top-mini {
     margin: 0;
@@ -8315,9 +8278,6 @@ margin-right: 0.75rem;
     line-height: 1.75rem;
     margin-bottom: 1rem;
     color: hsl(var(--destructive));
-}
-.footer-reviews__item {
-    list-style-type: none;
 }
 .introduction-tabs {
     padding: 5rem 1rem;
@@ -13092,6 +13052,162 @@ margin-right: 0.75rem;
 .frequently-questions-card__inner h3 svg {
     flex-shrink: 0;
 }
+.footer-logo-text span {
+    font-size: 24px;
+    background-image: linear-gradient(to right, hsl(var(--gold)), hsl(var(--green)), hsl(var(--gold)));
+    color: transparent;
+    text-align: center;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    width: 100%;
+    background-clip: text;
+    font-weight: 700;
+}
+.footer-logo-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 12px;
+}
+.footer-reviews h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: hsl(var(--gold));
+}
+.footer-guides h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: hsl(var(--green));
+}
+.footer-contact h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: hsl(var(--purple));
+}
+.footer-verified p {
+    margin-bottom: 1.5rem;
+    line-height: 1.625;
+    font-size: 16px;
+    color: hsl(var(--muted-foreground));
+}
+.footer-logo-text p {
+    font-size: 14px;
+    color: hsl(var(--muted-foreground));
+    margin: 0;
+}
+.footer-navigation {
+    display: flex;
+}
+.footer-reviews ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+.footer-guides ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+.footer-guides ul li a:hover {
+    color: hsl(var(--gold));
+}
+.footer-guides ul li a {
+    transition-duration: 150ms;
+    display: flex;
+    align-items: center;
+    color: hsl(var(--muted-foreground));
+}
+.footer-reviews ul li a:hover {
+    color: hsl(var(--gold));
+}
+.footer-reviews ul li a {
+    transition-duration: 150ms;
+    display: flex;
+    align-items: center;
+    color: hsl(var(--muted-foreground));
+}
+.footer-contact p {
+    color: hsl(var(--muted-foreground));
+    display: flex;
+    gap: 0.5rem;
+    align-items: flex-start;
+    flex-direction: column;
+    font-size: 0.75rem;
+}
+.footer-contact span {
+    margin: 12px 0;
+    line-height: 1.625;
+    font-size: 14px;
+    color: hsl(var(--muted-foreground));
+}
+.footer-contact__button-block div {
+    color: hsl(var(--primary-foreground));
+    font-weight: 600;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    padding: 0.125rem 0.625rem;
+    background-color: hsl(var(--muted));
+    border-radius: 9999px;
+    transition-duration: 150ms;
+    cursor: text;
+}
+.footer-contact__button-block div:hover {
+    background-color: hsl(var(--gold));
+}
+.footer__inner-bottom {
+    font-size: 16px;
+    color: hsl(var(--muted-foreground));
+}
+.footer__links-bottom a {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    transition-duration: 150ms;
+    color: hsl(var(--muted-foreground));
+}
+.footer__links-bottom a:hover {
+    color: hsl(var(--gold));
+}
+.footer__links-bottom {
+    display: flex;
+    gap: 24px;
+}
+.footer-guides ul li a svg {
+    margin-right: 0.5rem;
+    flex-shrink: 0;
+}
+.footer-reviews ul li a svg {
+    margin-right: 0.5rem;
+    flex-shrink: 0;
+}
+.footer-verified__button-block div {
+    font-weight: 600;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    padding: 0.125rem 0.625rem;
+    transition-duration: 150ms;
+}
+.footer-verified__button-block div:hover {
+    background-color: hsl(var(--gold) / 0.8);
+}
+.footer-verified__button-block {
+    gap: 1rem;
+}
+.footer-contact__button-block {
+    gap: 0.5rem;
+}
+.footer-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+.footer-contact p svg {
+    flex-shrink: 0;
+}
 .no-display {
     display: none;
 }
@@ -13186,9 +13302,6 @@ margin-right: 0.75rem;
 }
 .legal-introduction__title--terms {
     white-space: wrap;
-}
-.footer__links-bottom {
-    display: flex;
 }
 .home-introduction-benefits-row {
     display: grid;
@@ -13833,5 +13946,10 @@ margin-right: 0.75rem;
 }
 .cryptocurrencies-footer {
     margin-top: 2rem;
+}
+.footer-contact p {
+    flex-direction: row;
+    font-size: 1rem;
+    align-items: center;
 }
 }
